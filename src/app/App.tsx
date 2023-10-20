@@ -1,14 +1,19 @@
 import { useState } from "react";
-
 import Header from "../components/Header";
+import NewFactForm from "../components/NewFactForm";
+import Fact from "../types/Fact";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
-
+  const [facts, setFacts] = useState<Fact[]>([]);
+  console.log(facts);
   return (
-    <div className="bg-gray-900 text-white font-sans p-12 font-normal">
+    <>
       <Header showForm={showForm} setShowForm={setShowForm} />
-    </div>
+      {showForm ? (
+        <NewFactForm setShowForm={setShowForm} setFacts={setFacts} />
+      ) : null}
+    </>
   );
 }
 
