@@ -1,27 +1,20 @@
-# React + TypeScript + Vite
+# Epiphora
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Epiphora is a dynamic platform designed to facilitate knowledge sharing, learning, and personal growth. It leverages modern technologies to create a vibrant community of learners and thinkers.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Knowledge Sharing**: Share your insights, wisdom, and discoveries with the community.
+- **Continual Learning**: Engage in a culture of lifelong learning and self-improvement.
+- **Community Interaction**: Connect with like-minded individuals, participate in discussions, and gain fresh perspectives.
+- **Tailwind CSS**: Utilize the power of Tailwind CSS for rapid and responsive UI development.
+- **Supabase Integration**: Seamlessly integrate Supabase as the backend, ensuring efficient and secure data storage and retrieval.
+- **Vite Build Tool**: Harness the speed and efficiency of the Vite build tool for a lightning-fast development experience.
 
-## Expanding the ESLint configuration
+## License
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This project is licensed under the [AGPL License](LICENSE).
 
-- Configure the top-level `parserOptions` property like this:
+---
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Epiphora is designed to be a vibrant hub of learning, insights, and community interaction. We appreciate your support in making Epiphora a place of meaningful growth and shared knowledge.
