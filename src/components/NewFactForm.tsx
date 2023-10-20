@@ -4,6 +4,7 @@ import CategoryForm from "./CategoryForm";
 import { CATEGORIES } from "../data/data";
 import useValidUrl from "../hooks/useValidUrl";
 import Fact from "../types/Fact";
+import tailwindStyles from "../styles/styles";
 
 interface NewFactFormProps {
   setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
@@ -44,7 +45,7 @@ export default function NewFactForm({
 
   return (
     // <form className="fact-form hidden display--none">
-    <form className="fact-form " onSubmit={(e) => handleSubmit(e)}>
+    <form className={tailwindStyles.factForm} onSubmit={(e) => handleSubmit(e)}>
       <input
         type="text"
         title="Share a fact with this world"
@@ -76,7 +77,11 @@ export default function NewFactForm({
           <CategoryForm key={category.name} category={category} />
         ))}
       </select>
-      <button type="submit" className="btn btn-large" disabled={isUploading}>
+      <button
+        type="submit"
+        className={`${tailwindStyles.btn} ${tailwindStyles.btnLarge}`}
+        disabled={isUploading}
+      >
         Post
       </button>
     </form>
