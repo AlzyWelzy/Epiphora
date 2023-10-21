@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import NewFactForm from "../components/NewFactForm";
-import Fact from "../types/Fact";
 import supabase from "../services/supabase";
+import CategoryFilter from "../components/CategoryFilter";
+import FactList from "../components/FactList";
+import { Loader } from "../components/Loader";
+import FactProps from "../types/FactProps";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
-  const [facts, setFacts] = useState<Fact[]>([]);
+  const [facts, setFacts] = useState<FactProps[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentCategory, setCurrentCategory] = useState("all");
 
@@ -51,8 +54,14 @@ function App() {
       {showForm ? (
         <NewFactForm setShowForm={setShowForm} setFacts={setFacts} />
       ) : null}
-
-      <main className="main"></main>
+      <main className="main">
+        <CategoryFilter setCurrentCategory={setCurrentCategory} />
+        {isLoading ? (
+          <Loader />
+        ) : (
+          <FactList facts={facts} setFacts={setFacts} isLoading={isLoading} />
+        )}
+      </main>{" "}
     </>
   );
 }

@@ -1,4 +1,4 @@
-export default interface Fact {
+export default interface FactModel {
   id: number;
   text: string;
   source: string;

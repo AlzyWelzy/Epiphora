@@ -1,7 +1,7 @@
 // // FactListContainer.js
 // import React, { useEffect, useState } from "react";
 // import supabase from "./supabase";
-// import FactList from "./FactList";
+// import FactModelList from "./FactList";
 
 // function FactListContainer() {
 //   const [facts, setFacts] = useState([]);

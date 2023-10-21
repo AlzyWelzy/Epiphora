@@ -7,7 +7,7 @@ interface HeaderProps {
 }
 
 export default function Header({ showForm, setShowForm }: HeaderProps) {
-  const appTitle = "Today I Learned";
+  const appTitle = "Epiphora";
 
   return (
     <header className="header">

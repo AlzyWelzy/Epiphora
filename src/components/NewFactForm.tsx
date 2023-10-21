@@ -3,14 +3,9 @@ import supabase from "../services/supabase";
 import CategoryForm from "./CategoryForm";
 import { CATEGORIES } from "../data/data";
 import useValidUrl from "../hooks/useValidUrl";
-import Fact from "../types/Fact";
+import NewFactFormProps from "../types/NewFactForm";
 
 // import tailwindStyles from "../styles/styles";
-
-interface NewFactFormProps {
-  setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
-  setFacts: React.Dispatch<React.SetStateAction<Fact[]>>;
-}
 
 export default function NewFactForm({
   setShowForm,
