@@ -1,9 +1,16 @@
 import { useState } from "react";
-import FactModel from "../types/FactProps";
+// import FactModel from "../types/FactProps";
 import supabase from "../services/supabase";
 import { CATEGORIES } from "../data/data";
+import FactType from "../types/FactType";
+// import FactListProps from "../types/FactListPropsProps";
 
-export default function Fact({ fact, setFacts }: FactModel) {
+interface FactProps {
+  fact: FactType;
+  setFacts: React.Dispatch<React.SetStateAction<FactType[]>>;
+}
+
+export default function Fact({ fact, setFacts }: FactProps) {
   const [isUpdating, setIsUpdating] = useState(false);
   const isDisputed =
     fact.votesInteresting + fact.votesMindblowing < fact.votesFalse;

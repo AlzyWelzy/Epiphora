@@ -1,7 +1,6 @@
 // import FactModel from "./FactModel";
-import FactProps from "./FactProps";
-
+import FactType from "./FactType";
 export default interface NewFactFormProps {
   setShowForm: React.Dispatch<React.SetStateAction<boolean>>;
-  setFacts: React.Dispatch<React.SetStateAction<FactProps[]>>;
+  setFacts: React.Dispatch<React.SetStateAction<FactType[]>>; // Correct type
 }

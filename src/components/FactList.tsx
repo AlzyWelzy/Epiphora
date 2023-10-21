@@ -1,9 +1,9 @@
 // import tailwindStyles from "../styles/styles";
 import { NoFacts } from "./NoFacts";
-import FactList from "../types/FactList";
 import Fact from "./Fact";
+import FactListProps from "../types/FactListPropsProps";
 
-export default function FactList({ facts, setFacts }: FactList) {
+export default function FactList({ facts, setFacts }: FactListProps) {
   if (facts.length === 0) {
     return <NoFacts />;
   }
@@ -11,7 +11,6 @@ export default function FactList({ facts, setFacts }: FactList) {
   return (
     <section>
       <ul>
-        {" "}
         {facts.map((fact) => (
           <Fact key={fact.id} fact={fact} setFacts={setFacts} />
         ))}
