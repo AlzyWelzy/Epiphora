@@ -5,11 +5,11 @@ import supabase from "../services/supabase";
 import CategoryFilter from "../components/CategoryFilter";
 import FactList from "../components/FactList";
 import { Loader } from "../components/Loader";
-import FactProps from "../types/FactProps";
+import FactType from "../types/FactType";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
-  const [facts, setFacts] = useState<FactProps[]>([]);
+  const [facts, setFacts] = useState<FactType[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [currentCategory, setCurrentCategory] = useState("all");
 
@@ -59,7 +59,7 @@ function App() {
         {isLoading ? (
           <Loader />
         ) : (
-          <FactList facts={facts} setFacts={setFacts} isLoading={isLoading} />
+          <FactList facts={facts} setFacts={setFacts} />
         )}
       </main>{" "}
     </>
