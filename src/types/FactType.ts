@@ -7,4 +7,5 @@ export default interface FactType {
   votesMindblowing: number;
   votesFalse: number;
   createdIn: number;
+  [key: string]: string | number; // Allow only specific properties to be accessed using a string index
 }

@@ -17,18 +17,28 @@ export default function Fact({ fact, setFacts }: FactProps) {
 
   async function handleVote(columnName: string) {
     setIsUpdating(true);
-    const { data: updatedFact, error } = await supabase
-      .from("facts")
-      .update({ [columnName]: fact[columnName] + 1 })
-      .eq("id", fact.id)
-      .select();
 
-    setIsUpdating(false);
+    // Ensure that the value is a number before performing addition
+    if (typeof fact[columnName] === "number") {
+      const { data: updatedFact, error } = await supabase
+        .from("facts")
+        .update({ [columnName]: (fact[columnName] as number) + 1 }) // Use type assertion to specify it's a number
+        .eq("id", fact.id)
+        .select();
 
-    if (!error)
-      setFacts((facts) =>
-        facts.map((f) => (f.id === fact.id ? updatedFact[0] : f))
+      setIsUpdating(false);
+
+      if (!error) {
+        setFacts((facts) =>
+          facts.map((f) => (f.id === fact.id ? updatedFact[0] : f))
+        );
+      }
+    } else {
+      console.error(
+        `Cannot increment a non-numeric value in column: ${columnName}`
       );
+      setIsUpdating(false);
+    }
   }
 
   return (
