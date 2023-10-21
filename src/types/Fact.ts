@@ -1,4 +1,4 @@
-interface Fact {
+export default interface Fact {
   id: number;
   text: string;
   source: string;
@@ -8,5 +8,3 @@ interface Fact {
   votesFalse: number;
   createdIn: number;
 }
-
-export default Fact;

@@ -4,6 +4,7 @@ import CategoryForm from "./CategoryForm";
 import { CATEGORIES } from "../data/data";
 import useValidUrl from "../hooks/useValidUrl";
 import Fact from "../types/Fact";
+
 // import tailwindStyles from "../styles/styles";
 
 interface NewFactFormProps {
