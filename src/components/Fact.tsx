@@ -44,7 +44,7 @@ export default function Fact({ fact, setFacts }: FactProps) {
   return (
     <li className="fact">
       <p>
-        {isDisputed ? <span className="disputed">🛑 [DISPUTED] s</span> : null}
+        {isDisputed ? <span className="disputed">🛑 [DISPUTED] </span> : null}
 
         {fact.text}
         <a
