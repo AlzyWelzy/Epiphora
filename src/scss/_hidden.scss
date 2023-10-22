@@ -1,0 +1,41 @@
+.hidden {
+  opacity: 0;
+}
+
+.message {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3.2rem;
+  margin: 2.4rem;
+  color: $primary-color;
+}
+
+.display--none {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  #root {
+    padding: 2.4rem;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .fact-form {
+    padding: 1.6rem;
+  }
+
+  .fact {
+    padding: 1.2rem 1.6rem;
+  }
+}
